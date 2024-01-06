@@ -1,0 +1,153 @@
+﻿@model IPC.ViewModels.RedBoxLayoutViewModel
+@{
+    Layout = "_RedBoxLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Allergies.css" />
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/common.css">
+
+</head>
+
+<body>
+    <h3 style="color:#160B5B; position: absolute; top: 60px; left: 20px">Allergies</h3>
+    <form asp-action="post">
+
+        <table align="center" class="newStyle6">
+            <tr>
+                <td style="width: 169px" class="newStyle7">
+                    <Label><b>Penicillin</b></Label><b> </b>
+                </td>
+
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Betedine</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Sulpha</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Demerol</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Morphine</b></Label><b> </b>
+                </td>s
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Latex</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Tetracycline</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td class="newStyle7">
+                    <Label><b>Codeine</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Cipro</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Contrast Dye</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Food</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td style="width: 163px" class="newStyle7">
+                    <Label><b>Medicine</b></Label><b> </b>
+                </td>
+                <td class="auto-style5">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,false)
+                </td>
+
+            </tr>
+            <tr class="newStyle1">
+                <td class="auto-style7">
+                    <Label><b>Other</b></Label><b> </b>
+                </td>
+                <td class="auto-style8">
+                    @Html.CheckBoxFor(m => m.allergy.IsChecked,true)
+                </td>
+
+            </tr>
+
+        </table>
+        </div>
+    </form>
+    <br />
+    <br />
+
+    <div class="btn-pill" align="center">
+        <input type="submit" class="btn btn-pill text-white btn-block btn-primary" style="background-color:#1520A6; width:100px; margin:auto" OnClick="btnSubmit_Click" value="Submit">
+    </div>
+
+
+</body>
+</html>
+

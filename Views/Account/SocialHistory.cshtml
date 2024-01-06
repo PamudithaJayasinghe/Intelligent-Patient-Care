@@ -1,0 +1,100 @@
+﻿@model IPC.ViewModels.RedBoxLayoutViewModel
+@{
+	Layout = "_RedBoxLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<link rel="stylesheet" href="~/css/SocialHistoryStyles.css" />
+	
+</head>
+<body>
+	<h2 style="color:#160B5B;  top: 50px; left: 20px">Social History</h2>
+	<br />
+	<form asp-action="post">
+
+		<table align="center">
+			<tr>
+				<td class="style1">
+
+					<label> <b> Marital Status </b></label>
+				<td class="style2">
+						@Html.RadioButtonFor(m => m.social.Marital_Status,"Married")
+					<label for="Chkmar"><b>Married</b></label>
+				</td>
+				<td class="style2">
+						@Html.RadioButtonFor(m => m.social.Marital_Status,"Single")
+					<label for="Chksin"><b>Single</b></label>
+
+				</td>
+			</tr>
+
+			<tr>
+				<td class="style1">
+					<label> <b> Smoking </b></label>
+				<td class="style2">
+						@Html.RadioButtonFor(m => m.social.Smoking,"Yes")
+					<label for="Chksm"><b>Yes</b></label>
+				</td>
+				<td class="style2">
+						@Html.RadioButtonFor(m => m.social.Smoking,"No")
+					<label for="ChkNsm"><b>No</b></label>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="style1">
+					<label> <b> No. of years Smoking:</b></label>
+				</td>
+				<td colspan="2">
+					@Html.TextBoxFor(m => m.social.Smoking_years, new{@class = "form-control"})
+				</td>
+			</tr>
+
+			<tr>
+				<td class="style1">
+					<label> <b> Drugs</b></label>
+				<td class="style3">
+						@Html.RadioButtonFor(m => m.social.Drugs,"Yes")
+					<label for="Chkdru"><b>Yes</b></label>
+				</td>
+				<td class="style3">
+						@Html.RadioButtonFor(m => m.social.Drugs,"No")
+					<label for="ChkNdru"><b>No</b></label>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="style1">
+					<label> <b> Alcohol</b></label>
+				<td class="style3">
+						@Html.RadioButtonFor(m => m.social.Alcohol,"Yes")
+					<label for="ChkAlk"><b>Yes</b></label>
+				</td>
+				<td class="style3">
+						@Html.RadioButtonFor(m => m.social.Alcohol,"No")
+					<label for="ChkNAlk"><b>No</b></label>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="style1">
+					<label> <b> Alcohol Frequency/week:</b></label>
+				</td>
+				<td colspan="2" class="style4">
+					@Html.TextBoxFor(m => m.social.Alco_freq, new{@class = "form-control"})
+				</td>
+			</tr>
+
+		</table>
+	</form>
+	<br>
+	<br>
+
+	<div class="btn-pill" align="center">
+		<input type="submit" class="btn btn-pill text-white btn-block btn-primary" style="background-color:#1520A6; width:100px; margin:auto" OnClick="btnSubmit_Click" value="Submit">
+	</div>
+</body>
+</html>
